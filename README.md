@@ -1,2 +1,64 @@
 # RioUI
-Gooner library Made by some gooner
+A gooning UI Library that is created by Proz (me).
+
+It includes basic things such as:
+
+Buttons (has confirmation):
+
+Tab:AddButton(text, callback, requireConfirm, confirmMessage)
+
+Toggles (has confirmation too!):
+
+Tab:AddToggle(text, defaultState, callback, requireConfirm, confirmMessage)
+
+Sliders (it even has stepper and reset):
+
+Tab:AddSlider(text, min, max, default, callback, showStepper)
+
+Dropdown:
+
+Tab:AddDropdown(text, options, callback)
+
+TextBox (it has copy button):
+
+Tab:AddBox(placeholderText)
+
+..
+
+For other features, you can see it in the example usage! 
+
+Floating Icons:
+This icon can be customized, but when it isnt customized it will turn into the image of RioUI. 
+
+It toggles UI on or off.
+
+Notification:
+
+Window:Notify(title, message, duration, type)
+
+it has 4 types, 
+info, error, warning, success
+
+Info: Crimson color
+Error: Red
+Warning: Yellow
+Success: Green
+
+Console:
+
+RioUI is having their own console. You can add your own prints, errors or warning.
+
+Its the same as Notify, but its inside the console.
+
+Console functions:
+
+local Console = Window:CreateConsole(title, description)
+Console:Toggle()
+Console:Log(message, type) -- Types: "info", "warn", "error", "success"
+
+Example Preview:
+
+![Screenshot_2026-02-07-07-35-31-430_com roblox client-edit](https://github.com/user-attachments/assets/96622180-5d97-4d51-81ca-d538433950c4)
+
+Thats kinda it, i can update this everyday if i was still motivated and had ideas.
+Goodbye!
