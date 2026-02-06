@@ -1,0 +1,112 @@
+-- enjoy using this gooner lib fuhing bik dih!
+
+local RioUI = loadstring(game:HttpGet("https://gist.githubusercontent.com/prozprow87-netizen/5d843cfc1c41436c6a1ec439ac3f06ee/raw/114f28be9f6c110faceda0eb36da6c1806672cea/uilib.lua"))()
+
+-- Create the main window
+local Window = RioUI:CreateWindow("RioUI - UI Library")
+
+local About = Window:CreateTab("About")
+
+local TestTab = Window:CreateTab("Test Tab")
+
+-- uhh section
+About:AddSection("RioUI")
+
+-- elements ye 
+
+TestTab:AddSection("Gooning")
+
+local button = TestTab:AddButton("Goon now!", function()
+    print("gooned!")
+end)
+
+local button1 = TestTab:AddButton("Goon now! PT.2", function()
+    print("gooned!")
+end, true, "gooning nowadays?")
+
+local toggle1 = TestTab:AddToggle("Rio married to Proz? true/false", false, function(state)
+    print(state)
+end)
+
+local toggle = TestTab:AddToggle("Rio REALLY married to Proz? yes/no", false, function(state)
+    print(state)
+end, true, "is Rio REALLY married to Proz?")
+
+local nostepperslide = TestTab:AddSlider("Goon Meter", 0, 100, 50, function(value)
+    print("Goon Meter", value)
+end)
+
+local stepperslide = TestTab:AddSlider("Advanced Goon Meter", 0, 100, 50, function(value)
+    print("Advanced Goon Meter", value)
+end, true)
+
+-- you must create locals first so this could work, just like above. 
+-- anyway ts Tooltip check it out
+
+Window:AddTooltip(button, "Goon with this")
+Window:AddTooltip(button1, "confirm if you want to Goon or not")
+Window:AddTooltip(toggle1, "press if you agree rio is proz's wife")
+Window:AddTooltip(toggle, "confirm if you agree rio is married to Proz")
+Window:AddTooltip(nostepperslide, "determines how much proz goons on rio")
+Window:AddTooltip(stepperslide, "determines how much proz goons on rio pt.2")
+
+-- label kinda useless
+TestTab:AddLabel("Gooning")
+
+-- textbok
+local box = TestTab:AddBox("How much is proz loving Rio?")
+
+Window:AddTooltip(box, "plz put 1000")
+
+-- drop down and bend down, good girl
+local Dropdown = TestTab:AddDropdown("method", {"bed", "picture", "c.ai", "pixiv"}, function(selected)
+    print("Selected:", selected)
+end)
+
+Window:AddTooltip(Dropdown, "choose goon method")
+
+-- bind
+local bind = TestTab:AddBind("goon key", "RightShift", function(key)
+    print("Key bound:", key)
+end)
+
+Window:AddTooltip(bind, "start gooning by press key")
+ 
+ local Console = Window:CreateConsole("customize ts shi", "gooning console")
+
+
+-- log add
+Console:Log("Proz! you finally gooned", "success")
+Console:Log("Proz! wash the dishes for Rio", "info")
+Console:Log("Proz! Rio warn you saying you should come back early", "warn")
+Console:Log("Proz! Rio wants fun tonight 😛", "error")
+
+-- paragraph for you goonerz
+About:AddParagraph(
+    "What is RioUI?",
+    "RioUI is a UI Library for Roblox that is made by some gooner on a Christmas day."
+)
+
+-- ts all console stuff
+
+About:AddSection("Console")
+
+About:AddButton("Toggle console", function()
+    Console:Toggle()
+end)
+
+About:AddButton("Log adding example", function()
+    Console:Log("Proz a gooner so gooning he made a ui library", "info")
+end)
+
+-- my chores with Rio 
+local checklist = TestTab:AddChecklist("Permissions", {
+    "Gooning",
+    "Bang bang",
+    "Jerkoff",
+    "No permissions"
+}, function(selected)
+    print("bik dih") -- change ts bro
+end)
+
+Window:AddTooltip(checklist, "choose permission")
