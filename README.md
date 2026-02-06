@@ -83,7 +83,14 @@ Tab:AddBind(text, defaultKey, callback)
 ..
 
 Floating Icons:
-This icon can be customized, but when it isnt customized it will turn into the image of RioUI. 
+This icon can be customized, but when it isnt customized it will turn into the image of RioUI.
+
+```lua
+Window:SetFloatingIcon(imageId)
+```
+
+Floaing Icon Preview:
+![IMG_20260207_075044](https://github.com/user-attachments/assets/157c254e-792d-43e3-b62a-8d06067f7642)
 
 It toggles UI on or off.
 
@@ -101,6 +108,8 @@ Error: Red
 Warning: Yellow
 Success: Green
 
+Sadly, i am busy while creating this so no preview for it.
+
 Console:
 
 RioUI is having their own console. You can add your own prints, errors or warning.
@@ -113,6 +122,11 @@ local Console = Window:CreateConsole(title, description)
 Console:Toggle()
 Console:Log(message, type) -- Types: "info", "warn", "error", "success"
 ```
+
+Sadly, i am busy while creating this so no preview for it.
+
+
+Thats all for the features!
 
 Example Preview:
 
