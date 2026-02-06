@@ -5,23 +5,33 @@ It includes basic things such as:
 
 Buttons (has confirmation):
 
+```lua
 Tab:AddButton(text, callback, requireConfirm, confirmMessage)
+```
 
 Toggles (has confirmation too!):
 
+```lua
 Tab:AddToggle(text, defaultState, callback, requireConfirm, confirmMessage)
+```
 
 Sliders (it even has stepper and reset):
 
+```lua
 Tab:AddSlider(text, min, max, default, callback, showStepper)
+```
 
 Dropdown:
 
+```lua
 Tab:AddDropdown(text, options, callback)
+```
 
 TextBox (it has copy button):
 
+```lua
 Tab:AddBox(placeholderText)
+```
 
 ..
 
@@ -34,7 +44,9 @@ It toggles UI on or off.
 
 Notification:
 
+```lua
 Window:Notify(title, message, duration, type)
+```
 
 it has 4 types, 
 info, error, warning, success
@@ -51,10 +63,11 @@ RioUI is having their own console. You can add your own prints, errors or warnin
 Its the same as Notify, but its inside the console.
 
 Console functions:
-
+```lua
 local Console = Window:CreateConsole(title, description)
 Console:Toggle()
 Console:Log(message, type) -- Types: "info", "warn", "error", "success"
+```
 
 Example Preview:
 
