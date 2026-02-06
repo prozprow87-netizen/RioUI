@@ -1,7 +1,25 @@
 # RioUI
 A gooning UI Library that is created by Proz (me).
 
-It includes basic things such as:
+Start with loading its Library and creating window.
+
+```lua
+
+-- Load the library
+local RioUi = loadstring(game:HttpGet("https://gist.githubusercontent.com/prozprow87-netizen/5d843cfc1c41436c6a1ec439ac3f06ee/raw/114f28be9f6c110faceda0eb36da6c1806672cea/uilib.lua"))()
+
+-- Create a window
+local Window = RioUi:CreateWindow("rio is best")
+
+```
+
+And then, you create a tab:
+
+```lua
+local MainTab = Window:CreateTab("Main")
+```
+
+And then you put elements! :
 
 Buttons (has confirmation):
 
@@ -33,9 +51,36 @@ TextBox (it has copy button):
 Tab:AddBox(placeholderText)
 ```
 
-..
+Paragraph:
 
-For other features, you can see it in the example usage! 
+```lua
+Tab:AddParagraph(title, text)
+```
+
+Checklist (basically dropdown, but you can choose many things):
+
+```lua
+Tab:AddChecklist(text, options, callback)
+```
+
+Section:
+
+```lua
+Tab:AddSection(title, startCollapsed)
+```
+
+Labels:
+
+```lua
+Tab:AddLabel(text, rightText) -- rightText optional for dual labels.
+```
+Keybind:
+
+```lua
+Tab:AddBind(text, defaultKey, callback)
+```
+
+..
 
 Floating Icons:
 This icon can be customized, but when it isnt customized it will turn into the image of RioUI. 
